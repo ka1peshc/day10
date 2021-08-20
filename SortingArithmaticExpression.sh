@@ -8,3 +8,5 @@ expr2=$(( $(( $a * $b )) + $c ))
 echo $expr2
 expr3=$(( $c + $(( $a / $b )) ))
 echo $expr3
+expr4=$(( $(( $a % $b )) + $c ))
+echo $expr4
