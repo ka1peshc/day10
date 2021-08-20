@@ -1,7 +1,7 @@
 headsCount=0
 tailsCount=0
 count=0
-while [ $count -lt 16 ]
+while [[ $headsCount -lt 21 && $tailsCount -lt 21 ]]
 do
     result=$((RANDOM%2))
     case $result in
