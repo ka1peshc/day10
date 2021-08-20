@@ -41,3 +41,17 @@ do
 done
 
 echo "Values in array format desc : "${resultArr[@]}
+
+for (( i=0; i<${#resultArr[@]}; i++ ))
+do
+    for (( j=$(($i+1)); j<${#resultArr[@]}; j++ ))
+    do
+        if [ ${resultArr[$i]} -gt ${resultArr[$j]} ]
+        then
+            temp=${resultArr[$i]}
+            resultArr[$i]=${resultArr[$j]}
+            resultArr[$j]=$temp
+        fi
+    done
+done
+echo "Values in array format asc : "${resultArr[@]}
