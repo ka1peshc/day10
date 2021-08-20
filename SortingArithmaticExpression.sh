@@ -17,5 +17,12 @@ expr4=$(( $(( $a % $b )) + $c ))
 resultDict[expr4]=$expr4
 echo $expr4
 
-echo "${!resultDict[@]}"
-echo "${resultDict[@]}"
+count=0
+for i in "${!resultDict[@]}"
+do
+    echo "key : $i"
+    echo "value : ${resultDict[$i]}"
+    resultArr[((count++))]=${resultDict[$i]}
+done
+
+echo "Values in array format : "${resultArr[@]}
