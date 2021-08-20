@@ -6,3 +6,5 @@ expr1=$(( $a + $(($b * $c )) ))
 echo $expr1
 expr2=$(( $(( $a * $b )) + $c ))
 echo $expr2
+expr3=$(( $c + $(( $a / $b )) ))
+echo $expr3
